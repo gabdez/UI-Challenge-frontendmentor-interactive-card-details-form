@@ -3,8 +3,8 @@
         <div>
             <div class="text-xs uppercase mb-1">CardHolder Name</div>
             <div>
-                <input v-model="cardFormStore.cardholderName" type="text" placeholder="e.g. Jane Appleseed"
-                    class="p-1" />
+                <input v-model="cardFormStore.cardholderName" type="text" placeholder="e.g. Jane Appleseed" class="p-1"
+                    :class="{ 'border-red-400': !cardFormStore.cardholderName }" />
             </div>
             <div v-show="!cardFormStore.cardholderName" class="text-red-500 text-sm">
                 Can't be blank
@@ -14,7 +14,7 @@
             <div class="text-xs uppercase mb-1">Card number</div>
             <div>
                 <input v-model="cardFormStore.cardNumber" type="text" placeholder="e.g. 123456789" class="p-1"
-                    @keydown="checkDigit" />
+                    @keydown="checkDigit" :class="{ 'border-red-400': !cardFormStore.cardNumber }" />
             </div>
             <div v-show="!cardFormStore.cardNumber" class="text-red-500 text-sm">
                 Can't be blank
@@ -25,9 +25,9 @@
                 <div class="uppercase text-xs mb-1">Exp. date (MM/YY)</div>
                 <div class="grid grid-cols-2 gap-3">
                     <input v-model="cardFormStore.expDateMM" type="text" placeholder="MM" class="p-1"
-                        @keydown="checkDigit" maxlength="2" />
+                        :class="{ 'border-red-400': !cardFormStore.expDateMM }" @keydown="checkDigit" maxlength="2" />
                     <input v-model="cardFormStore.expDateYY" type="text" placeholder="YY" class="p-1"
-                        @keydown="checkDigit" maxlength="2" />
+                        :class="{ 'border-red-400': !cardFormStore.expDateYY }" @keydown="checkDigit" maxlength="2" />
                 </div>
                 <div v-show="cardFormStore.expDateError" class="text-red-500 text-sm">
                     Can't be blank
@@ -36,7 +36,7 @@
             <div>
                 <div class="uppercase text-xs mb-1">cvc</div>
                 <input v-model="cardFormStore.cvc" type="text" placeholder="e.g. 123" class="p-1" @keydown="checkDigit"
-                    maxlength="3" />
+                    :class="{ 'border-red-400': !cardFormStore.cvc }" maxlength="3" />
                 <div v-show="cardFormStore.cvcError" class="text-red-500 text-sm">
                     Can't be blank
                 </div>
