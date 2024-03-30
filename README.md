@@ -1,6 +1,7 @@
 # interactive-card-details-form
 
-This template should help get you started developing with Vue 3 in Vite.
+Live site url at: https://gabdez.github.io/UI-Challenge-frontendmentor-interactive-card-details-form
+This project is running with Vue 3 in Vite.
 
 ## Recommended IDE Setup
 
