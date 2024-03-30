@@ -42,7 +42,7 @@
 
 <style scoped>
 .firstSection {
-    background-image: url("./src/assets/images/bg-main-mobile.png");
+    background-image: url("@/assets/images/bg-main-mobile.png");
 }
 
 .cvc-position {
