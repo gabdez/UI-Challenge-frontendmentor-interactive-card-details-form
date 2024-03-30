@@ -18,5 +18,7 @@ export const useCardFormStore = defineStore('cardForm', () => {
         return !cvc.value;
     })
 
-    return { cardholderName, cardNumber, cardNumberError, expDateMM, expDateYY, expDateError, cvc, cvcError }
+    const submitted = ref(false);
+
+    return { cardholderName, cardNumber, cardNumberError, expDateMM, expDateYY, expDateError, cvc, cvcError, submitted }
 })
