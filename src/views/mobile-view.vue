@@ -15,7 +15,7 @@
                 <div class="relative top-28 left-4">
                     <img src="@/assets/images/bg-card-front.png" />
                     <img class="absolute top-4 left-6 w-1/5" src="@/assets/images/card-logo.svg" />
-                    <span class="absolute text-lg top-16 left-6 text-xs"
+                    <span class="absolute text-lg bottom-12 left-6 text-md"
                         :class="[cardFormStore.cardNumber !== '' ? 'text-white' : 'text-gray-400']">{{
                             `${(cardFormStore.cardNumber) || "0000 0000 0000 0000"}` }}</span>
                     <span class="uppercase absolute bottom-4 left-6 text-xs max-w-36 truncate"
@@ -46,7 +46,7 @@
 }
 
 .cvc-position {
-    top: 60px;
+    top: 45%;
     right: 30px;
 }
 </style>
